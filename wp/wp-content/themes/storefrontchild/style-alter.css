@@ -1,0 +1,297 @@
+
+
+ 
+
+
+img {
+    display: inline;
+}
+
+
+/**************************
+***************************
+      Header
+***************************
+**************************/
+@media screen and (min-width: 768px) {
+	/*centers the logo*/
+	.site-branding{ 
+		text-align: center;
+		margin: 0 auto !important;
+		float: none !important;
+		width: 250px !important;
+		padding-bottom: 15px;
+		
+	}	
+
+	/* Masthead margin*/
+	#masthead {  
+		margin-bottom: 25px;
+		padding-top: 0px;
+	}		
+	
+	/* adjusts the width of the main navigation container to accommodate the search box in the same line*/
+	.woocommerce-active .site-header .main-navigation {
+		width: 100%;
+		text-align: center;
+	}
+	/* positions the search icon properly in the search box*/
+	#masthead .site-search .widget_product_search form:before {
+		top: 1.6em;
+		left: .75em;
+		position: relative;
+	}
+	/*  resizes the search box*/
+	#masthead .site-search .widget_product_search input[type=search],#masthead .site-search .widget_product_search input[type=text] {
+		padding: .3em .3em .3em 3em;
+		line-height: 1;
+		border-radius: 30px;
+	}
+	/* places the search box to the left of the cart menu(optional)*/
+	.woocommerce-active .site-header .site-search {
+		float: left;	
+	}
+/* color and position of lupa*/
+.site-search .widget_product_search form:before {
+    top: 1.0em;
+    left: 1.05em;
+	  font-size: 1rem;
+}	
+
+
+	
+/* MENU Main Navigation*/
+/**.main-navigation {
+		width: 100%;
+		text-align: center;
+	  background-color: #333;
+	  border-radius: 30px;
+	  margin-bottom: 5px;
+	  margin-right: 0px;
+
+	}
+	
+.main-navigation ul.menu>li>a, .main-navigation ul.nav-menu>li>a {
+    padding-top: .7em;
+    padding-right: .3em;
+    padding-bottom: .7em;
+    padding-left: .3em;
+    font-size: 1em;
+    color: #c75d5b;
+	  text-align: center;
+}	
+	
+.main-navigation ul li a:hover, .main-navigation ul li:hover > a, ul.menu li.current-menu-item > a {
+    color: #ffffff;
+}	**/
+
+
+
+
+
+
+
+/* Boton Menu Toggle*/
+/**button.menu-toggle {
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #c75d5b;
+    box-shadow: none;
+    border-radius: 15px;
+    padding: .6180469716em .875em .6180469716em 2.617924em;
+	 margin-bottom: 2px;
+    font-size: .875em;
+    max-width: 120px;
+} **/
+
+
+/**
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} **/
+/**************************
+***************************
+     END Header
+***************************
+**************************/
+
+
+
+	
+	
+	
+	
+
+/* Alertas */
+.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
+    margin-bottom: 2.617924em;
+    background-color: #555555;
+    margin-left: 0;
+    border-radius: 30px;
+    color: #fff;
+    clear: both;
+    border-left: 0em solid rgba(0,0,0,.15);
+    padding: 1em 2em 1em 1em;
+    position: relative;
+    list-style: none outside;
+}
+
+
+
+	 
+ 
+    
+    
+/**************************
+***************************
+     MegaMenu
+***************************
+**************************/   
+    
+    
+ 
+    
+@media (min-width: 768px) {
+.main-navigation ul li, .secondary-navigation ul li {
+    position: static;
+    display: inline-block;
+    text-align: center;
+}
+    
+.main-navigation ul.menu ul.sub-menu, .main-navigation ul.nav-menu ul.children {
+    background-color: #cbcbcb;
+    margin-top: 180px;
+}   
+    
+ 
+.main-navigation ul.menu ul li a, .main-navigation ul.nav-menu ul li a {
+    padding: .875em 1.41575em;
+    font-weight: 600;
+    font-size: .9em;
+    color: #4e4e4e;
+}    
+    
+    
+}    
+    
+    
+
+    
+    
+    
+ 
+    
+    
+
+@media screen and (min-width: 600px){
+    .has-mega-menu{
+        position:static;
+    }
+
+    li.has-mega-menu .sub-menu {
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        z-index: 100;
+ align-items: center;
+    }
+
+    li.has-mega-menu:hover>.sub-menu{
+    /*flexbox fallback for browsers that do not support CSS GRID lyout*/
+       display: flex;
+        flex-wrap: wrap;
+    /*CSS GRID lyout*/
+       display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(50%, 1fr));  
+    }
+
+}
+@media screen and (min-width: 992px){
+    li.has-mega-menu:hover>.sub-menu{grid-template-columns: repeat(auto-fit,minmax(33.3333%, 1fr)); }
+}
+
+@media screen and (min-width: 1200px){
+    li.has-mega-menu:hover>.sub-menu{grid-template-columns: repeat(auto-fit,minmax(25%, 1fr)); }
+}
+
+
+
+
+
+@media screen and (min-width: 600px){
+    li.mega-menu-column {
+        width: 100%;
+        max-width: 100%;
+        min-height: 1px;
+        padding: 10px 10px;
+        flex: 1 0 calc(50%);
+    }
+}
+
+@media screen and (min-width: 992px){
+    li.mega-menu-column {flex: 1 0 calc(33.333%);}
+}
+
+@media screen and (min-width: 1200px){
+    li.mega-menu-column {flex: 1 0 calc(25%);}
+}
+
+
+
+
+.mega-menu-column img {
+  display: block;
+align-content: center;
+}
+ 
+    
+    
+    
+    
+ /**************************
+***************************
+     END MegaMenu
+***************************
+**************************/
+   
+    
+    
+@media screen and (max-width: 480px)
+{
+h1.woocommerce-products-header__title.page-title {
+    color: aliceblue;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+}    
+
+
+/***** Título Páginas *****/
+
+@media screen and (min-width: 480px)
+{
+.woocommerce-products-header {
+    text-align: center;
+    padding: 0 0 3em !important;
+    line-height: 1.214;
+    letter-spacing: 0px;
+}
+
+h1, .alpha {
+    font-size: 2.8em;
+    line-height: 1.214;
+    letter-spacing: -1px;  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: 500 !important;
+    margin: 0 0 .5407911001em;
+    color: #676767;
+}
+
+}
+    

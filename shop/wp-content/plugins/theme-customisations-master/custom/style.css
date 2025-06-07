@@ -1,0 +1,257 @@
+/**
+ * Add any custom CSS here.
+ *
+ * This file will be loaded after all other theme stylesheets.
+ */
+
+
+
+
+
+/******** FOOTER ********/
+
+#sinatra-footer .sinatra-footer-column {
+    flex-basis: 100%;
+    max-width: 100%;
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************
+***************************
+     MegaMenu
+***************************
+**************************/   
+    
+    
+ 
+    
+@media (min-width: 768px) {
+.main-navigation ul li, .secondary-navigation ul li {
+    position: static;
+    display: inline-block;
+    text-align: center;
+}
+    
+.main-navigation ul.menu ul.sub-menu, .main-navigation ul.nav-menu ul.children {
+    background-color: #cbcbcb;
+}   
+    
+ 
+.main-navigation ul.menu ul li a, .main-navigation ul.nav-menu ul li a {
+    padding: .875em 1.41575em;
+    font-weight: 600;
+    font-size: .9em;
+    color: #4e4e4e;
+}    
+    
+    
+}    
+    
+    
+
+    
+    
+    
+ 
+    
+    
+
+@media screen and (min-width: 600px){
+    .has-mega-menu{
+        position:static;
+    }
+
+    li.has-mega-menu .sub-menu {
+        width: 100%;
+        position: absolute;
+        z-index: 100;
+		align-items: center;
+    }
+
+    li.has-mega-menu:hover>.sub-menu{
+    /*flexbox fallback for browsers that do not support CSS GRID lyout*/
+       display: flex;
+        flex-wrap: wrap;
+    /*CSS GRID lyout*/
+       display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(50%, 1fr));  
+    }
+
+}
+@media screen and (min-width: 992px){
+    li.has-mega-menu:hover>.sub-menu{grid-template-columns: repeat(auto-fit,minmax(33.3333%, 1fr)); }
+}
+
+@media screen and (min-width: 1200px){
+    li.has-mega-menu:hover>.sub-menu{grid-template-columns: repeat(auto-fit,minmax(25%, 1fr)); }
+}
+
+
+
+
+
+@media screen and (min-width: 600px){
+    li.mega-menu-column {
+        width: 100%;
+        max-width: 100%;
+        min-height: 1px;
+        padding: 10px 10px;
+        flex: 1 0 calc(50%);
+    }
+}
+
+@media screen and (min-width: 992px){
+    li.mega-menu-column {flex: 1 0 calc(33.333%);}
+}
+
+@media screen and (min-width: 1200px){
+    li.mega-menu-column {flex: 1 0 calc(25%);}
+}
+
+
+
+
+.mega-menu-column img {
+  display: block;
+align-content: center;
+}
+ 
+    
+    
+    
+    
+ /**************************
+***************************
+     END MegaMenu
+***************************
+**************************/
+
+
+
+
+
+
+
+/******** Productos Loop Esquinas Redondas y Espacios ********/
+
+.woocommerce ul.products li.product .si-product-thumb {
+    margin-bottom: 15px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+ 
+
+
+
+
+
+/******** PayPal Página de Pago ********/
+
+#add_payment_method #payment ul.payment_methods li:not(.woocommerce-notice).payment_method_paypal label, .woocommerce-cart #payment ul.payment_methods li:not(.woocommerce-notice).payment_method_paypal label, .woocommerce-checkout #payment ul.payment_methods li:not(.woocommerce-notice).payment_method_paypal label {
+    flex-grow: 1;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+
+
+
+
+/******** Página Finalizar Compra ********/
+
+.woocommerce-order {
+    background: #fff;
+    padding: 30px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+/******** CONTACT FORM 7  ********/
+
+/***** Todos los Label al 100% de ancho *****/
+label {
+    width: 100%;
+}
+
+
+#wpcf7 {
+    font-family: sans-serif;
+}
+
+
+/***** Color Text en drop files *****/
+.codedropz-upload-inner h3 {
+    color: #939393;
+}
+.codedropz-upload-inner {
+    color: #939393;
+}
+
+
+
+/***** Ancho y alto Select *****/
+select {
+    height: 50px;
+    width: 100%;
+    color: #555555;
+}
+
+
+
+/***** Input tipo de letra *****/
+.wpcf7-form-control-wrap input[type=text] {
+    font-family: 'Homenaje';
+}
+
+
+.wpcf7-form-control-wrap input[type=date] {
+    font-family: 'Homenaje';
+}
+
+
+
+
+
+
+/***** Botón Cotiza Menú *****/
+
+.botoncotiza {
+background-color: #1c295f;
+    color: #ffffff;
+    border-style: solid;
+    border-width: thin;
+    border-color: #e84723;
+    font-family: Homenaje;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    }
