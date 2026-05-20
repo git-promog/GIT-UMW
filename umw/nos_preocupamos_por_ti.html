@@ -61,7 +61,22 @@
 <div class="loader-page">
 		<div class="preloader"></div>
 	</div>
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar d-flex justify-content-center" style="background-color: rgba(0, 0, 0, 0.5); ">
+	
+
+<!-- NAVBAR ----------------------------------------------->
+<div id="navbar"></div>
+
+<script>
+  // Detecta si la página está en raíz o en /umw/
+  const ruta = window.location.pathname.includes("/umw/") ? "navbar.html" : "umw/navbar.html";
+
+  fetch(ruta)
+    .then(res => res.text())
+    .then(html => document.getElementById("navbar").innerHTML = html);
+</script>
+<!-- //NAVBAR ----------------------------------------------->	
+	
+
 			<div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
 
 				<div class="container">
