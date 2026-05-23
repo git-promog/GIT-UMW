@@ -1,0 +1,35 @@
+name: Deploy Web via FTP
+
+on:
+  push:
+    branches:
+      - main  # Cambia por master si tu rama principal se llama master
+
+jobs:
+  web-deploy:
+    name: Subiendo archivos al servidor
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Sincronizando repositorio
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: 🚀 Subiendo a Hospedando.mx (Modo Seguro)
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: public_html/
+        
+        # CAPA DE SEGURIDAD 1: Evita explícitamente que GitHub borre archivos en el servidor
+        dangerous-clean-slate: false
+        
+        # CAPA DE SEGURIDAD 2: Ignora por completo todo lo que no sea de tu proyecto
+        # Solo procesará tu index.html, tu sitemap.xml y la carpeta umw/
+        exclude: |
+          **
+          !index.html
+          !sitemap.xml
+          !umw/**
