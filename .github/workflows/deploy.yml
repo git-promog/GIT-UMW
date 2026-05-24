@@ -33,3 +33,7 @@ jobs:
           !index.html
           !sitemap.xml
           !umw/**
+          **/.DS_Store
+          **/.htaccess
+          **/Icon_*
+          **/Icon_
